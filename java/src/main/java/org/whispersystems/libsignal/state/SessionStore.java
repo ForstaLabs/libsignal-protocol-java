@@ -33,7 +33,7 @@ public interface SessionStore {
    * @param name the name of the client.
    * @return all known sub-devices with active sessions.
    */
-  public List<Integer> getSubDeviceSessions(String name);
+  public List<Integer> getDeviceSessions(String name);
 
   /**
    * Commit to storage the {@link SessionRecord} for a given recipientId + deviceId tuple.

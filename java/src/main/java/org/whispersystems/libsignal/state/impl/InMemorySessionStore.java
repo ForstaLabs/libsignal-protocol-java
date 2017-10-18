@@ -30,13 +30,11 @@ public class InMemorySessionStore implements SessionStore {
   }
 
   @Override
-  public synchronized List<Integer> getSubDeviceSessions(String name) {
+  public synchronized List<Integer> getDeviceSessions(String name) {
     List<Integer> deviceIds = new LinkedList<>();
 
     for (SignalProtocolAddress key : sessions.keySet()) {
-      if (key.getName().equals(name) &&
-          key.getDeviceId() != 1)
-      {
+      if (key.getName().equals(name)) {
         deviceIds.add(key.getDeviceId());
       }
     }

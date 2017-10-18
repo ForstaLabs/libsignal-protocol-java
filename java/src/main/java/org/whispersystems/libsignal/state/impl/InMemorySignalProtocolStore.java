@@ -69,8 +69,8 @@ public class InMemorySignalProtocolStore implements SignalProtocolStore {
   }
 
   @Override
-  public List<Integer> getSubDeviceSessions(String name) {
-    return sessionStore.getSubDeviceSessions(name);
+  public List<Integer> getDeviceSessions(String name) {
+    return sessionStore.getDeviceSessions(name);
   }
 
   @Override
